@@ -1,13 +1,14 @@
 package example;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 public class TestaContaLogin {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		Scanner sc = new Scanner(System.in);
+//		Scanner sc = new Scanner(System.in);
 		
 		// Instanciando um objeto do tipo ContaLogin
 		ContaLogin cl = new ContaLogin();
@@ -17,15 +18,17 @@ public class TestaContaLogin {
 		
 		// Informando um nome com o Scanner
 		System.out.print("Digite o seu nome: ");
-		String nome = sc.nextLine();
+		String nome = JOptionPane.showInputDialog("Digite seu nome.");
+//		String nome = sc.nextLine();
 		
 		// Passando o valor do nome para o objeto
 		cl.setNome(nome);
 		
 		// Imprimindo o novo valor 
 		System.out.printf("O novo nome é: %s%n", cl.getNome());
+		JOptionPane.showMessageDialog(null, cl.getNome());
 		
-		sc.close();
+//		sc.close();
 		
 
 	}
